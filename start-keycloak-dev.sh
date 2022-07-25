@@ -12,7 +12,7 @@ echo "::endgroup::"
 echo "::group::Waiting for Keycloak to accept connections"
 sleep 1
 TIMER=0
-until curl -f http://localhost:8080 || exit 1
+until curl -f http://localhost:8080
 do
   sleep 2 
   echo "."
