@@ -1,0 +1,18 @@
+name: 'Keycloak-dev in GitHub Actions'
+description: 'Start a Keycloak development server'
+
+branding:
+  icon: 'database'
+  color: 'green'
+
+inputs:
+  keycloak-port:
+    description: 'Port on which to run Keycloak'
+    required: false
+    default: '8080'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.keycloak-port }}
