@@ -9,7 +9,7 @@ inputs:
   keycloak-port:
     description: 'Port on which to run Keycloak'
     required: false
-    default: '8080'
+    default: 8080
 
 runs:
   using: 'docker'
