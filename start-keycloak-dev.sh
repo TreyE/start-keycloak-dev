@@ -14,11 +14,11 @@ sleep 1
 TIMER=0
 until curl -f http://localhost:8080
 do
-  sleep 2 
+  sleep 5 
   echo "."
-  TIMER=$((TIMER + 2))
+  TIMER=$((TIMER + 5))
 
-  if [[ $TIMER -eq 60 ]]; then
+  if [[ $TIMER -eq 90 ]]; then
     echo "Keycloak did not initialize within 60 seconds. Exiting."
     exit 2
   fi
