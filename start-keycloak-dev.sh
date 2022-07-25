@@ -12,7 +12,7 @@ echo "::endgroup::"
 echo "::group::Waiting for Keycloak to accept connections"
 sleep 1
 TIMER=0
-until docker exec --tty keycloak-dev curl -f http://localhost:KEYCLOAK_PORT
+until docker exec --tty keycloak-dev curl -f http://localhost:$KEYCLOAK_PORT
 do
   sleep 5 
   echo "."
